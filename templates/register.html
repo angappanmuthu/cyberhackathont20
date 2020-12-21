@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="" method="POST" enctype="multipart/form-data">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <img src="../static/images/banner_white.jpg" style="width: 100%;" />
+        <div class="curved-box">
+          <div class="row">
+              <div class="col-sm-12">
+                <a class="link" style="float: right;color: red; text-decoration: underline;" href="../static/files/brochure.pdf" target="_blank">Cyber Hackathon (Brochure)</a>
+                  <center><h1 style="margin-top: 20px;margin-bottom: 20px;">Registration Form</h1></center>
+              </div>
+              <div class="col-sm-6" >
+                  <div class="input-group">
+                      <span class="input-group-addon icon"><i class="fa fa-user fa-2x" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="name" placeholder="Name" required>
+                    </div><br>
+                    <div class="input-group">
+                      <span class="input-group-addon icon"><i class="fa fa-mobile fa-2x" aria-hidden="true"></i></span>
+                      <input type="tel" class="form-control" name="mobile" placeholder="Mobile No." required>
+                    </div><br>
+                    <div class="input-group">
+                      <span class="input-group-addon icon"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></span>
+                      <input  type="email" class="form-control" name="email" placeholder="Email" required>
+                    </div><br>
+                    
+                      <!-- <label for="dobid">Date of Birth:</label> -->
+                      <div class="input-group" id="dobid">
+                        <span class="input-group-addon icon"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i></span>
+                        <input  type="date" class="form-control" name="dob" placeholder="DOB" required placeholder="Date of Birth">
+                      </div><br>
+                    
+                    
+                    
+                    <div class="o_event">
+                        <label for="r3">Gender:</label>
+                        <div class="radio" id="r3">
+                            <label><input type="radio" name="gender" value="male" checked>Male</label>
+                            <label style="margin-left: 5px;"><input type="radio" value="female" name="gender">Female</label>
+                          </div>
+                    </div>
+                    <div class="stream">
+                      <div class="form-group">
+                        <label for="sel1">Select Stream:</label>
+                        <select class="form-control" id="sel1" name="stream" required>
+                          <option selected hidden>Select Stream</option>
+                          <option value="Science">Science</option>
+                          <option value="Arts">Arts</option>
+                          <option value="Management">Management</option>
+                          <option value="Education">Education</option>
+                        </select>
+                        <br>
+                      </div>
+                    </div>
+                    <div class="o_event">
+                      <label for="r4"></label>
+                      <div class="radio" id="r4">
+                          <label><input type="radio" name="dtype" value="UG" checked>UG</label>
+                          <label style="margin-left: 5px;"><input type="radio" value="PG" name="dtype">PG</label>
+                        </div>
+                  </div>
+                    <div class="input-group">
+                        <span class="input-group-addon icon"><i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control" name="course" placeholder="Programme/Course" required>
+                    </div><br>
+                    
+              </div>
+              <div class="col-sm-6">
+                <div class="input-group">
+                  <span class="input-group-addon icon"><i class="fa fa-university fa-2x" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="institute" placeholder="Institution" required>
+                </div><br>
+                  <div class="c_event">
+                      <label for="r1">Compulsary Event:</label>
+                      <div class="radio" id="r1">
+                          <label><input type="radio" name="c_event" checked>Quizophile (Quiz)</label>
+                        </div>
+                  </div>
+
+                  <div class="o_event">
+                      <label for="r2">Optional Event:</label>
+                      <div class="radio" id="r2">
+                          <label><input type="radio" name="o_event" value="Paints" checked>Cyber Sketch (drawing)</label>
+                          <label style="margin-left: 5px;"><input type="radio" name="o_event" value="Spam">Stop the Spam (Innovative Idea)</label>
+                        </div>
+                  </div>
+                  <div class="photo">
+                      <label for="f1">Photograph</label>
+                      <input id="f1" type="file" name="photo" class="form-control-file border" required>
+                  </div>
+                  <div class="col-id">
+                      <label for="f2">College ID</label>
+                      <input id="f2" type="file" name="college_id" class="form-control-file border" required>
+                  </div>
+                  <div class="submit-btn">
+                      <input type="checkbox" checked id="term" required/>
+                      <label for="term"> I agree all terms & conditions</lable>
+                  </div>
+                  <div class="submit-btn">
+                      <input type="submit" class="btn btn-primary btn-lg" value="Register" />
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<style>
+    .icon{
+        background-color: white;
+        color: black;
+        border: none;
+    }
+
+    body{
+		/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
+		background-image: linear-gradient(to right,#27daf4,#3572f1);
+	}
+
+    input[type='text'],input[type='tel'],input[type='email'],input[type='date']{
+        border-bottom: gray 2px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: none;
+        height: 45px;
+        font-size: 16px;
+    }
+    .curved-box{
+      background-color: white;
+      padding: 2%;
+    }
+    .photo, .col-id, .c_event, .o_event, .stream, .submit-btn{
+      margin: 20px;
+      font-size: 15px;
+    }
+    h1{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+    }
+    h4{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+    }
+</style>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1 align="center" >WELCOME TO CYBER HACKATHON T20</h1>
+
+    <div class="btn-div col-md-12" align="center">
+        <a href="/register" class="btn button1">Register</a>
+        <a href="/login" class="btn button1">Login</a>
+    </div>
+    </div>
+</div>
+
+<style type="text/css">
+
+    body{
+        margin:0px;
+        padding: 0px;   
+    }
+
+    body{
+        background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../static/images/cyber.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        padding-bottom: 30px;
+    }
+
+    h1{
+        color: yellow;
+        margin-top: 150px;
+        letter-spacing: 10PX;
+        font-size: 70px;
+    }
+
+    .button1 {
+      color: white; 
+      border: 2px solid yellow;
+      margin-right: 10px;
+      border-radius: 30px;
+      background-color: #00000000;
+      display: inline-block;
+        width:220px;
+        height: 60px;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .button1:hover {
+      background-color: yellow;
+      color: black;
+      /*font-weight: bold;*/
+
+    }
+
+    .button1:after{
+        background-color: blue;
+    }
+
+    .btn-div{
+        margin-top: 70px;
+        /*margin-right: 450px;
+        margin-left: 450px;*/
+    }
+
+    a{
+        /*letter-spacing: 10px;*/
+        color: white;
+        /*font-weight: bold;*/
+        font-size: 30px;
+        text-decoration-line: none;
+        margin: 20px;
+    }
+    a:hover{
+        background-color: black;
+        color: white;
+    }
+
+    .para{
+        margin-left: -100px;
+        margin-top: 20px;
+
+    }
+    
+
+
+</style>
+
+{% endblock %}

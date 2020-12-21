@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<label>Photos</label>
+{% for photo in photos %}
+
+<table>
+    <tr>
+        <td><a href="/static/uploads/photo/{{photo}}" download>static/uploads/photo/{{photo}}</a></td>
+    </tr>
+</table>
+
+{% endfor %}
+
+<label>College_ids</label>
+{% for college_id in college_ids %}
+
+<table>
+    <tr>
+        <td><a href="/static/uploads/college_id/{{college_id}}" download>static/uploads/college_id/{{college_id}}</a></td>
+    </tr>
+</table>
+
+{% endfor %}
+
+{% endblock %}
