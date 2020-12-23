@@ -85,7 +85,7 @@ def register():
             if response['status']:
                 print(save_photo(photo, userid))
                 print(save_college_id(college_id, userid))
-                return "<script>alert('You have successfully registered !');window.location = '/';</script>"
+                return "<script>alert('your Registration is Successful. After Scrutiny,you login credentials will be sent to your email id. You can access the portal on 28.12.2020');window.location = '/';</script>"
             else:
                 return "<script>alert('This mobile number already registered !');window.location = '/';</script>"
             return render_template("register.html")
